@@ -2,9 +2,16 @@
 # basic example to read video
 import cv2 as cv
 
-# function to read video
-
 def read_video(video_path):
+    """
+    Read and display a video file.
+
+    Parameters:
+    video_path (str): The path to the video file.
+
+    Returns:
+    None
+    """
     capture = cv.VideoCapture(video_path)
     while True:
         isTrue, frame = capture.read()
@@ -18,3 +25,4 @@ def read_video(video_path):
 
 # call the function
 read_video('Resources/Videos/dog.mp4')
+
